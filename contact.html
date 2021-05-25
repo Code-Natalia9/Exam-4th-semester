@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> <!-- to use in different browsers-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- allows scaling eg. in mobile-desktop-->
+    <meta name="robots" content="noindex, nofollow"> <!--hides from google-->
+    <title>Contact page heid</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zzr3zpn.css"> <!--Proxima Nova font-->
+    <link rel="stylesheet" href="KontrapunktMiki font.css"> <!--Kontrapunkt Miki font-->
+    <link rel="shortcut icon" href="pictures/favicon-swan.png" type="image/x-icon"> <!--Favicon = icon miniature-->
+    <link rel="stylesheet" href="studing in denmark grid tryout.css">
+    <link rel="stylesheet" href="studing in denmark grid tryout style.css">
+    <link rel="stylesheet" href="nav bar and footer style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- arrow stylesheet-->
+    <link rel="stylesheet" href="contact.css"> <!--contact form-->
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="main_navbar">
+            <li id="home_nb"><a href="#home">Home</a></li>
+            <li id="study_nb">
+                <button class="dropdown_bt" onclick="myFunction()">Studying in Denmark<i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-links" id="click_dropdown">
+                    <a href="#studyInDenmark" class="main_link_dropdown">Studying in Denmark</a>
+                    <a href="#" class="subpages_links">Registration certificate</a>
+                    <a href="#" class="subpages_links">CPR and Yellow card</a>
+                    <a href="#" class="subpages_links">NemID </a>
+                    <a href="#" class="subpages_links">Banking</a>
+                    <a href="#" class="subpages_links">Working in Denmark</a>
+                    <a href="#" class="subpages_links">Skat</a>
+                    <a href="#" class="subpages_links">AP degree</a>
+                    <a href="#" class="subpages_links">SU</a>
+                    <a href="#" class="subpages_links">Accommodation</a>
+                    <a href="#" class="subpages_links">Budget</a>
+                    <a href="#" class="subpages_links">Travel & Transport</a>
+                    <a href="#" class="subpages_links">Learn Danish</a>
+                </div>
+            </li>
+            <li id="logo_nb"><a href="#home"><img src="pictures/logo.png" alt="logoHeid" class="logo"></a></li>
+            <li id="contact_nb"><a href="#contact">Contact</a></li>
+            <li id="offer_nb"><a href="#offer">Our Offer</a></li>
+        </ul>
+    </nav>
+    <!--End of the nav bar-->
+    
+    <!-- START of the Contact Form-------------------------------------------------------------------------------------------------->
+    <div class="grid">
+        <div class="contact-title">
+            <h1>Contact us</h1>
+            <h4>We will be with you in 24 hours.</h4>
+        </div>
+        <div class="contact-form">
+            <form id="contact-form" method="post" action="contactform.php">
+                <input name="name" type="text" class="form-control" placeholder="Your Full Name" required>
+                <br>
+                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+                <br>
+                <input name="zoom" type="text" class="form-control" placeholder="Consulation" required>
+                <br>
+                <textarea name="message" class="form-control" placeholder="Write your message:" row="4" required></textarea>
+                <br>
+                <input type="submit" class="form-control submit" value="SEND MESSAGE">
+            </form>
+        </div>
+
+    </div>
+    <!-- END of the Contact Form-------------------------------------------------------------------------------------------------->
+    
+    <!--Footer-->
+    <footer class="main_footer">
+        <footer class="join_us">
+            <p class="join-us_text">Join us</p>
+            <div class="footer-icon-container">
+                <a href="#"><img class="footer-icon" id="facebook-icon" src="pictures/icon---facebook-red.png"
+                        alt="facebook icon"></a>
+                <a href="#"><img class="footer-icon" id="contact-icon" src="pictures/icon---email-red.png"
+                        alt="email icon"></a>
+            </div>
+        </footer>
+        <p class="footer_text" id="footer-email">Email:</p>
+        <p class="footer_contact" id="f-email-contact">heid@gmail.com</p>
+        <p class="footer_text" id="footer-phone">Phone:</p>
+        <p class="footer_contact" id="f-phone-contact">+45 5555 5555</p>
+        <a href="#" class="footer_link">Privacy Policy</a>
+        <img class="footer_graphic" src="pictures/chibi-character-in-green.png" alt="HEID icon">
+        <p class="footer_sign">Created by Regnat 2021</p>
+    </footer>
+    
+    
+    <script>
+        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("click_dropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropdown_bt')) {
+                var click_dropdown = document.getElementById("click_dropdown");
+                if (click_dropdown.classList.contains('show')) {
+                    click_dropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

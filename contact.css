@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+  box-sizing: border-box;
+}
+
+/* FORM STYLEING------------------------------------------------*/
+form {
+  margin-top: 20px;
+}
+
+.form-control {
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #577c57;
+  color: #33281f;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+input {
+  height: 45px;
+}
+
+form .submit {
+  background: #a2eaa2;
+  border-color: transparent;
+  color: #33281f;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+form .submit:hover {
+  background: #33281f;
+  color: #a2eaa2;
+  cursor: pointer;
+}
+
+/* FORM GRID SYSTEM------------------------------------------------*/
+.contact-form {
+  display: grid;
+  grid-column: col-start 4 / span 2;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-title {
+    text-align: center;
+  }
+}
+
+/*DESKTOP VERSION*/
+@media only screen and (min-width: 600px) {
+  .form-control {
+    width: 40rem;
+  }
+
+  .contact-title {
+    text-align: center;
+  }
+}
