@@ -1,0 +1,17 @@
+/*Kontrapunkt Miki Regular font*/
+@font-face {
+font-family:"Kontrapunkt-Miki-regular";
+src:url("1545031386-kontrapunkt-miki-otf/KontrapunktMiki-Regular.otf")
+}
+
+/*Kontrapunkt Miki Bold font*/
+@font-face {
+font-family:"Kontrapunkt-Miki-bold";
+src:url("1545031386-kontrapunkt-miki-otf/KontrapunktMiki-Bold.otf")
+}
+
+/*Kontrapunkt Miki Extrabold font*/
+@font-face {
+font-family:"Kontrapunkt-Miki-extrabold";
+src:url("1545031386-kontrapunkt-miki-otf/KontrapunktMiki-ExtraBold.otf")
+}

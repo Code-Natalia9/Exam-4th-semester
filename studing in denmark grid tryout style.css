@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family:"proxima-nova";
+	font-size: 1.125em;
+	color: #33281F;
+	margin: 0;
+	/*DA291C*/
+}
+
+h1{
+	text-align: center;
+	font-family: "Kontrapunkt-Miki-bold";
+	font-size: 2.2em;
+	color: #A2EAA2;
+}
+
+h2{
+	font-family: "Kontrapunkt-Miki-bold";
+	font-size: 1.7em;
+	color: #577C57;
+}
+@media only screen and (max-width: 600px) {h2{text-align: center;}}
+
+h3{
+	font-family:"proxima-nova";
+	font-size: 1.5em;
+	color: #A2EAA2;
+	font-weight: bold;
+	margin: 20px 0px;
+}
+
+h4{
+	font-family:"proxima-nova";
+	font-size: 1.2em;
+	font-weight: 270;
+	margin: 10px 0px;
+	color: #577C57;
+}
+
+.step_subtitle {
+	font-family:"proxima-nova";
+	font-size: 1.2em;
+	font-weight: 270;
+	margin: 10px 0px;
+}
+.step_subtitle:hover{
+	color: #da291c;
+}
+@media only screen and (max-width: 600px) {
+	.step_subtitle{
+		text-decoration: underline;
+		text-decoration-thickness: 1.5px;
+		-webkit-text-decoration-color: #da291c; /* Safari */  
+		text-decoration-color: #da291c;
+	}
+}
+
+.typical_link{color: #da291c;}
+.typical_link:hover{color: #577C57;}
+
+
+/*secondary nv bar text*/
+.secnavbar-mainlink{
+	background-color: #A2EAA2;
+	padding: 10px 50px 10px 20px;
+}
+.secnavbar_mainlist{
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+.secnavbar_links{
+	padding-left: 5px;
+	color: #577C57;
+}
+.secnavbar_list{
+	margin-left: 30px;
+	margin-top: 0px;
+	padding: 8px 0px;
+	border-bottom: solid thin #33281F;
+	background-color: #ffffff;	
+	font-size: 0.9em;
+}
+
+
+/*images*/
+.graphic_step{
+	width: 20%;
+	height: auto;
+	min-width: 150px;
+	margin: 30px 15px;
+}
+.arrow{
+	width: 20%;
+	height: auto;
+	min-width: 120px;
+	margin: 0px;
+}
+.next_page_arrow{
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+.next_page_text{
+	text-align: right;
+	font-size: 0.85em;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+.next_page_name{
+	text-align: right;
+	font-size: 0.8em;
+	font-style: italic;
+	margin-top: 5px;
+}
+
+/*---------------------------------------------------------------------*/
+/*Subpages*/
+.header_picture{
+	width: 25%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	min-width: 150px;
+}
+#added-info{
+	margin-top: 60px;
+}
+.document-list {margin-left:25px;}
+.second-document-list {margin-left:50px;}
+.document-sublist{
+	list-style-type: circle;
+	margin-left: 50px;
+}
+
+

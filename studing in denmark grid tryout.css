@@ -1,0 +1,172 @@
+@charset "utf-8";
+/* CSS Document */
+
+.grid{
+	max-width: 1240px;
+	margin: 0 auto;
+}
+.grid>*{
+	border: 2px solid #ffffff;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 20px;
+}
+.grid > * {
+  grid-column: col-start / span 12;
+}
+
+
+/*Mobile version*/
+@media only screen and (max-width: 600px) {
+	#arrow1, #arrow2, #arrow3, #arrow4, .second_navbar{
+		display: none;
+	}	
+	.separator{
+		width: 80%;
+		grid-column: col-start 2 / span 12;
+		margin: 40px 0px;
+	}
+	.window_step{
+		display: flex;
+		flex-direction: column;
+		grid-column: col-start 3 /span 9;
+	}
+	
+	/*------------------------------------------------*/
+	/*Subpages*/
+	h2{
+		margin-left: 5px;
+	}
+	.bodytext{
+		margin:10px;
+	}
+	.header_picture{
+		margin-top: 30px;
+		margin-bottom: 40px;
+	}
+	.next_page_arrow{
+		width: 28%;
+	}
+	.reg_cer_steps, .cpr_steps{
+		grid-column: col-start 2 / span 11;
+	}
+	#what_reg_cer, #what_cpr, #what_nemid{
+		grid-column: col-start 1 / span 12;
+	}
+}
+/*additional for secondary nav bar*/
+@media only screen and (max-width: 850px) {
+	.second_navbar{
+		display: none;
+	}
+}
+
+/*DESKTOP VERSION*/
+@media only screen and (min-width: 600px) {
+	p{
+		margin: 20px;
+	}
+	.separator{
+		width: 90%;
+		grid-column: col-start 5 / span 4;
+		margin: 70px 0px;
+	}
+	#studing_in_dk_separator{
+		margin-top: 200px;
+	}
+	.second_navbar{
+		left: 0%;
+		position: absolute;
+		z-index: 1;
+	}
+	.head_article{
+		grid-column: col-start 4 / span 8;
+		margin-top: 60px;
+	}
+	.window_step{
+		display: flex;
+		flex-direction: column;
+	}
+	#step1{
+		grid-column: col-start 3 / span 3;
+		grid-row: 4/6;
+		margin-left: 40px;
+	}
+	#arrow1{
+		grid-column: col-start 6 / span 3;
+		grid-row: 5;
+	}
+	
+	#step2{
+		grid-column: col-start 8 / span 3;
+		grid-row: 6/8;
+	}
+	#arrow2{
+		grid-column: col-start 6 / span 3;
+		grid-row: 7;
+	}
+	
+	#step3{
+		grid-column: col-start 3 / span 3;
+		grid-row: 8/10;
+		margin-left: 40px;
+	}
+	#arrow3{
+		grid-column: col-start 6 / span 3;
+		grid-row: 9;
+	}
+	
+	#step4{
+		grid-column: col-start 8 / span 3;
+		grid-row: 10/12;
+	}
+	#arrow4{
+		grid-column: col-start 6 / span 3;
+		grid-row: 11;
+	}
+	
+	#step5{
+		grid-column: col-start 3 / span 3;
+		grid-row: 12;
+		margin-left: 40px;
+	}
+
+	/*------------------------------------------------*/
+	/*Subpages*/
+	h1{margin-bottom: 50px;}
+	.header_picture{
+		margin-top: 55px;
+		margin-bottom: 80px;
+	}
+	.next_page_arrow{
+		width: 40%;
+	}
+	
+	#what_reg_cer, #what_cpr, #what_nemid{
+		grid-column: col-start 1 / span 8;
+		margin-top: 80px;
+	}
+	#how_reg_cer, #help_reg_cer, #how_cpr, #what_yellowcard, #how_nemid, #changing_address, #digital_post{
+		grid-column: col-start 1 / span 8;
+	}
+	.reg_cer_steps, .cpr_steps{
+		grid-column: col-start 2 / span 7;
+	}
+	#from-reg_cer{
+		grid-column: col-start 10 / span 3;
+		grid-row: 11;
+	}
+	#from-nemid{
+		grid-column: col-start 10 / span 3;
+		grid-row: 13;
+	}
+	
+}
+
+
+
