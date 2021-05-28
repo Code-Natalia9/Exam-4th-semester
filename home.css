@@ -1,116 +1,162 @@
-/* Each section is seperated, each have the mobile first than the changes for the desktop
-=================*/
+@charset "utf-8";
+/* CSS Document */
 
-/* Start - Welcome to HEID
-==========================================================================*/
-/* Mobile
-=================*/
-.home-heid {
-  width: 100%;
-  height: 100vh;
-  background-position: center center;
-  background-size: cover;
-  background-image: url("pictures/img1.jpg");
+.grid {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.grid > * {
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  padding: 10px;
 }
 
-.welcome-picture {
-  width: 80%;
-  padding-left: 30px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 20px;
+}
+.grid > * {
+  grid-column: col-start / span 12;
 }
 
-.welcome {
-  position: relative;
+img {
+  /* the first img on top of the page */
+  max-width: 100%;
+  height: auto;
 }
 
-/* Desktop
-=================*/
-@media (min-width: 60rem) {
+/*Mobile version*/
+@media only screen and (max-width: 600px) {
   .welcome-picture {
-    width: 30%;
-    padding-left: 15px;
+    /* it is our swan */
+    width: 80%;
+    padding-left: 30px;
   }
+
   .welcome {
-    float: left;
+    position: relative;
   }
-}
-
-/* END - Welcome to HEID
-==========================================================================*/
-/* Start - OUR OFFERS
-==========================================================================*/
-/* Mobile
-=================*/
-.offer-item {
-  margin: 0;
-  position: relative;
-  padding: 0.5em;
-}
-
-.offer-icon {
-  width: 3.1em;
-  position: absolute;
-  padding-left: 0.2em;
-  padding-top: 0.4em;
-}
-
-.offer-desc h4 {
-  background: #e2ede2;
-  padding: 0.7em;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.offer-desc {
-  bottom: 1em;
-  left: 0;
-  right: 0;
-  padding: 1em;
-  outline: 0.01em solid #33281f;
-}
-
-.list {
-  padding-left: 2em;
-  list-style: circle;
-}
-
-.price {
-  font-weight: 700;
-  padding-bottom: 1em;
-  font-size: 1.2em;
-  color: #da291c;
-  text-align: center;
-}
-/* Button at offer section
-=========================*/
-.contact-us {
-  font-size: 1rem;
-  font-weight: 700;
-  background-color: #e2ede2;
-  color: #da291c;
-  padding: 1em;
-}
-
-.contact-us:hover {
-  background-color: #a2eaa2;
-}
-/* Desktop
-=================*/
-@media (min-width: 60rem) {
-  .offer-item {
-    width: 30%;
-    float: left;
+  #arrow1,
+  #arrow2,
+  #arrow3,
+  #arrow4,
+  .second_navbar {
+    display: none;
   }
+  .separator {
+    width: 80%;
+    grid-column: col-start 2 / span 12;
+    margin: 40px 0px;
+  }
+
+  .separator01 {
+    grid-row: 15;
+    width: 80%;
+    grid-column: col-start 2 / span 12;
+    margin: 40px 0px;
+  }
+
+  .window_step {
+    display: flex;
+    flex-direction: column;
+    grid-column: col-start 3 / span 9;
+  }
+
+  /*------------------------------------------------*/
+  /*Subpages*/
+  h2 {
+    margin-left: 5px;
+  }
+  .bodytext {
+    margin: 10px;
+  }
+
+  .reg_cer_steps,
+  .cpr_steps {
+    grid-column: col-start 2 / span 11;
+  }
+  #what_reg_cer,
+  #what_cpr,
+  #what_nemid {
+    grid-column: col-start 1 / span 12;
+  }
+  /*------------------------------------------------*/
+  /*Our Offers Section*/
+  .offers {
+    grid-row: 16;
+  }
+
+  .offer01 {
+    grid-row: 17;
+  }
+
+  .offer02 {
+    grid-row: 18;
+  }
+
+  .offer03 {
+    grid-row: 19;
+  }
+
   .offer-icon {
-    width: 4.9em;
+    width: 3.1em;
+    position: absolute;
+    padding-left: 0.2em;
+    padding-top: 0.4em;
+  }
+
+  .offer-desc h4 {
+    background: #e2ede2;
+    padding: 0.7em;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .offer-desc {
+    bottom: 1em;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    outline: 0.01em solid #33281f;
+  }
+
+  .list {
+    padding-left: 2em;
+    list-style: circle;
+  }
+
+  .price {
+    font-weight: 700;
+    padding-bottom: 1em;
+    font-size: 1.2em;
+    color: #da291c;
+    text-align: center;
+  }
+  /* Button at offer section
+=========================*/
+  .contact-button {
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #a2eaa2;
+    color: #33281f;
+    padding: 1em;
+    margin-left: 6.5em;
+    border-radius: 5px;
+  }
+
+  .contact-button:hover {
+    background-color: #33281f;
+    color: #a2eaa2;
   }
 }
+/*------------------------------------------------*/
+/*Our Recommendation Section*/
+/*it wasn't coded with the grid, therfore the mobile version stands alone*/
+.reviews h1 {
+  margin-top: -250px;
+}
 
-/* END- OUR OFFERS
-==========================================================================*/
-/* Start - Recommendations
-==========================================================================*/
-/* Mobile
-=================*/
 .reviews {
   width: 100%;
   height: 100vh;
@@ -128,6 +174,7 @@
   border: #e2ede2 solid 2px;
   position: relative;
   display: none;
+  margin-bottom: -250px;
 }
 /* The card is what chages, it is not the same size as the outline around it
 =========================*/
@@ -176,9 +223,204 @@
   top: 0;
   left: 0;
 }
-/* Desktop
-=================*/
-@media (min-width: 60rem) {
+
+/*DESKTOP VERSION*/
+@media only screen and (min-width: 600px) {
+  .picture {
+    grid-row: 2;
+    grid-column: col-start 1 / span 3;
+  }
+  .welcome-picture {
+    width: 100%;
+    padding-left: 15px;
+  }
+  .welcome {
+    grid-row: 2;
+    grid-column: col-start 6 / span 8;
+  }
+
+  p {
+    margin: 20px;
+  }
+  .title {
+    grid-row: 4;
+  }
+  .separator {
+    width: 90%;
+    grid-column: col-start 5 / span 4;
+    margin: 70px 0px;
+  }
+  .separator01 {
+    width: 90%;
+    grid-column: col-start 5 / span 4;
+    margin: 70px 0px;
+  }
+
+  .head_article {
+    grid-column: col-start 4 / span 8;
+    margin-top: 60px;
+  }
+  .window_step {
+    display: flex;
+    flex-direction: column;
+  }
+  #step1 {
+    grid-column: col-start 3 / span 3;
+    grid-row: 5/7;
+    margin-left: 40px;
+  }
+  #arrow1 {
+    grid-column: col-start 6 / span 3;
+    grid-row: 6;
+  }
+
+  #step2 {
+    grid-column: col-start 8 / span 3;
+    grid-row: 7/9;
+  }
+  #arrow2 {
+    grid-column: col-start 6 / span 3;
+    grid-row: 8;
+  }
+
+  #step3 {
+    grid-column: col-start 3 / span 3;
+    grid-row: 9/11;
+    margin-left: 40px;
+  }
+  #arrow3 {
+    grid-column: col-start 6 / span 3;
+    grid-row: 10;
+  }
+
+  #step4 {
+    grid-column: col-start 8 / span 3;
+    grid-row: 11/13;
+  }
+  #arrow4 {
+    grid-column: col-start 6 / span 3;
+    grid-row: 12;
+  }
+
+  #step5 {
+    grid-column: col-start 3 / span 3;
+    grid-row: 13;
+    margin-left: 40px;
+  }
+
+  /*------------------------------------------------*/
+  /*Subpages*/
+  h1 {
+    margin-bottom: 50px;
+  }
+  .header_picture {
+    margin-top: 55px;
+    margin-bottom: 80px;
+  }
+
+  #what_reg_cer,
+  #what_cpr,
+  #what_nemid {
+    grid-column: col-start 1 / span 8;
+    margin-top: 80px;
+  }
+
+  .reg_cer_steps,
+  .cpr_steps {
+    grid-column: col-start 2 / span 7;
+  }
+  #from-reg_cer {
+    grid-column: col-start 10 / span 3;
+    grid-row: 11;
+  }
+  #from-nemid {
+    grid-column: col-start 10 / span 3;
+    grid-row: 13;
+  }
+  /*------------------------------------------------*/
+  /*Our Offers Section*/
+  .offers {
+    grid-row: 16;
+  }
+
+  .offer01 {
+    grid-row: 17;
+    grid-column: col-start 1 / span 5;
+  }
+
+  .offer02 {
+    grid-row: 17;
+    grid-column: col-start 5 / span 4;
+  }
+
+  .offer03 {
+    grid-row: 17;
+    grid-column: col-start 8 / span 5;
+  }
+
+  .offer-icon {
+    width: 4.9em;
+    position: absolute;
+    padding-left: 0.2em;
+    padding-top: 0.4em;
+  }
+
+  .offer-desc h4 {
+    background: #e2ede2;
+    padding: 0.7em;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .offer-desc {
+    bottom: 1em;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    outline: 0.01em solid #33281f;
+  }
+
+  .list {
+    padding-left: 2em;
+    list-style: circle;
+  }
+
+  .price {
+    font-weight: 700;
+    padding-bottom: 1em;
+    font-size: 1.2em;
+    color: #da291c;
+    text-align: center;
+  }
+  /* Button at offer section
+=========================*/
+  .contact-button {
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #a2eaa2;
+    color: #33281f;
+    padding: 1em;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 3px;
+  }
+
+  .middle-offer {
+    margin-left: 0.4em;
+  }
+  .side-offer {
+    margin-left: 3.5em;
+  }
+
+  .contact-button:hover {
+    background-color: #33281f;
+    color: #a2eaa2;
+  }
+  /*------------------------------------------------*/
+  /*Our Recommendation Section*/
+  .reviews h1 {
+    margin-top: -300px;
+  }
   .card {
     height: 300px;
     padding: 40px;
@@ -202,5 +444,4 @@
     font-size: 0.8em;
   }
 }
-/* END - Recommendations
-==========================================================================*/
+
